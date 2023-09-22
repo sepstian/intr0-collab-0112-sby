@@ -1,12 +1,35 @@
 <script>
     // in develop branch
     // INTRO SET-UP
+    class product{
+        constructor(_name, _stock, _price){
+            this.name = _name
+            this.stock = _stock
+            this.price = _price
+        }
+    }
     // Tempat deklarasi variable
-
+    const data =[
+        {
+            name: "Jacket",
+            stock: 2,
+            price: 300000,
+        }
+    ]
     // Tempat deklarasi function
+    // Tempat deklarasi variable
+    const addData = (name, stock, price) => {
+        data.push(new product(name, stock, price))
+    }
 
     // 1. Fitur Tambah data
+    const name = prompt("Masukkan nama :");
+    const stock = parseInt(prompt("Masukkan stock :", 1));
+    const price = parseInt(prompt("Masukkan price :"));
 
+    addData(name, stock, price);
+    console.log(data);
+    alert("Tambah data succes");
     // 2. Fitur Lihat data
     
     // 3. Fitur Edit data
